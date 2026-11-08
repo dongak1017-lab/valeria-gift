@@ -37,7 +37,7 @@ button:disabled{opacity:.55}#birthday{display:none}.timer{display:flex;justify-c
 <button onclick="openLetter()">Открыть секретное письмо 💌</button><div id="secret"><h2>Дорогая Валерия! 🌸</h2><p>Поздравляю тебя с днём рождения! Желаю тебе огромного счастья, исполнения желаний, верных друзей и незабываемых моментов.</p><p>Спасибо за нашу дружбу. Надеюсь, впереди нас ждёт ещё очень много весёлых историй!</p><p>Никогда не переставай улыбаться! 💗</p><div class="signature">От Сайына ❤️</div></div><button onclick="confetti(30)">Ещё праздничных сердечек! 💕</button>
 </section><div class="footer">Сделано специально для Валерии · с дружбой от Сайына 💗</div></main>
 <script>
-const target=new Date(2026,10,1,0,0,0);
+const target=new Date(2026,10,16,0,0,0);
 function update(){let d=target-Date.now();if(d<=0){document.getElementById('waiting').style.display='none';document.getElementById('birthday').style.display='block';document.getElementById('birthday').classList.add('reveal');document.getElementById('openBtn').style.display='none';return}
 document.getElementById('days').textContent=Math.floor(d/86400000);document.getElementById('hours').textContent=String(Math.floor(d/3600000)%24).padStart(2,'0');document.getElementById('minutes').textContent=String(Math.floor(d/60000)%60).padStart(2,'0');document.getElementById('seconds').textContent=String(Math.floor(d/1000)%60).padStart(2,'0')}
 function openGift(){document.getElementById('gift').classList.add('open');document.getElementById('giftMessage').style.display='block';confetti(25)}
